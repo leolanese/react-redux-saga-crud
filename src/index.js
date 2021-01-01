@@ -13,10 +13,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const sagaMiddleware = createSagaMiddleware();
 
-const protocol = "http";
+const protocol = "http://";
 const domain = "rem-rest-apo.herokuapp.com";
 const pathApi = "/api";
-const pathUsers = "/users";
+// const pathUsers = "/users";
 const url = protocol + domain + pathApi;
 
 axios.defaults.withCredentials = true;
