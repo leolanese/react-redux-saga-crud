@@ -88,6 +88,7 @@ As of February 2020, chrome has blocked cross-site cookies by default which mean
 npx create-react-app react-redux-saga-crud && cd react-redux-saga-crud
 npm i --save redux react-redux redux-saga reactstrap react react-dom axios
 npm i --save-dev --save-exact prettier
+npm i --save bootstrap
 ```
 
 ```js
@@ -99,8 +100,11 @@ npm i --save-dev --save-exact prettier
 + redux@4.0.5
 + react@17.0.1
 + react-dom@17.0.1
-+ node@12.4.0
-+ nvm@0.34.0
++ prettier@2.2.3
++ bootstrap@4.5.3
+
+- node@12.4.0
+- nvm@0.34.0
 ```
 
 

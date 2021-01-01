@@ -6,10 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 import reducers from "./reducers";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import rootSaga from './sagas';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-// store and passing the reducers
-const store = createStore(reducers);
+const sagaMiddleware = createSagaMiddleware();
 
 const protocol = "http";
 const domain = "rem-rest-apo.herokuapp.com";
@@ -19,6 +21,11 @@ const url = protocol + domain + pathApi;
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = url;
+
+// store and passing the reducers
+const store = createStore(reducers, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   // <React.StrictMode><App /></React.StrictMode>,

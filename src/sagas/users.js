@@ -7,7 +7,7 @@ import {
   fork,
 } from "redux-saga/effects";
 import * as actions from "../actions/users";
-import * as api from "../api/users";
+import * as api from "../apiRequests/users";
 
 function* getUsers() {
   try {
