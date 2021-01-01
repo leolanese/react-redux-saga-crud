@@ -9,7 +9,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
 // store and passing the reducers
-create store = createStore(reducers)
+const store = createStore(reducers)
 
 const protocol = 'http';
 const domain = 'rem-rest-apo.herokuapp.com';
