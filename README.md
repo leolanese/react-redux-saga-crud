@@ -68,3 +68,70 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Introduction
+
+### API
+REM REST API
+
+* Settings
+As of February 2020, chrome has blocked cross-site cookies by default which means the REM Rest API will no longer work. To get around this go to `chrome://flags/` in a new tab in chrome, then disable the following options:
+
+```js
+`SameSite by default cookies` = DISABLE
+`Enable removing SameSite=None cookies` = DISABLE
+`Cookies without SameSite must be secure` = DISABLE
+```
+
+### Let's get starting:
+```js
+npx create-react-app react-redux-saga-crud && cd react-redux-saga-crud
+npm i --save redux react-redux redux-saga reactstrap react react-dom axios
+```
+
+```js
+// my local setup
++ axios@0.21.1
++ redux-saga@1.1.3
++ reactstrap@8.8.1
++ react-redux@7.2.2
++ redux@4.0.5
++ react@17.0.1
++ react-dom@17.0.1
++ node@12.4.0
++ nvm@0.34.0
+```
+
+
+```js
+// arquitecture to be create it after deploy
+package.json
+README.md
+./public
+./src
+  ./actions
+  ./components
+    ./App.css
+    ./App.js
+    ./App.test.js
+  ./reducers
+  ./sagas
+```
+
+```js
+npm start
+```
+
+---
+### :100: <i>Thanks!</i>
+#### Now, don't be an stranger. Let's stay in touch!
+
+> I'm a passionately curious Front-end Engineer. I like sharing what I know, and learning what I don't. London, UK.
+
+##### :radio_button: linkedin: <a href="https://www.linkedin.com/in/leolanese/" target="_blank">@LeoLaneseltd</a>
+##### :radio_button: Twitter: <a href="https://twitter.com/LeoLaneseltd" target="_blank">@LeoLaneseltd</a>
+##### :radio_button: Portfolio: <a href="https://www.leolanese.com" target="_blank">www.leolanese.com</a>
+##### :radio_button: DEV.to: <a href="https://www.dev.to/leolanese" target="_blank">dev.to/leolanese</a>
+##### :radio_button: Blog: <a href="https://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
+##### :radio_button: Questions / Suggestion / Recommendation: developer@leolanese.com

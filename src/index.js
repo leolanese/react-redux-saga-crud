@@ -1,8 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
-import App from './App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+const protocol = 'http';
+const domain = 'rem-rest-apo.herokuapp.com';
+const pathApi = '/api';
+const pathUsers = '/users'
+const url = protocol + domain + pathApi;
+
+axios.defaults
+  .withCredentials = true;
+axios.defaults
+  .baseURL = url;
+
 
 ReactDOM.render(
   <React.StrictMode>
