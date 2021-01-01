@@ -72,10 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Introduction
 
-### API
-REM REST API
+### REM REST API
 
-* Settings
+* Settings:
 As of February 2020, chrome has blocked cross-site cookies by default which means the REM Rest API will no longer work. To get around this go to `chrome://flags/` in a new tab in chrome, then disable the following options:
 
 ```js
@@ -84,7 +83,7 @@ As of February 2020, chrome has blocked cross-site cookies by default which mean
 `Cookies without SameSite must be secure` = DISABLE
 ```
 
-### Let's get starting:
+### Let's get starting
 ```js
 npx create-react-app react-redux-saga-crud && cd react-redux-saga-crud
 npm i --save redux react-redux redux-saga reactstrap react react-dom axios
