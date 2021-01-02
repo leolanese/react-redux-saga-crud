@@ -9,6 +9,7 @@ export const getUsers = () => {
 };
 
 export const createUser = ({ firstName, lastName }) => {
+  console.log('createUser', { firstName, lastName })
   return axios.post("/users", {
     firstName,
     lastName,
