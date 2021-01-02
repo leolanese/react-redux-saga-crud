@@ -59,7 +59,7 @@ class NewUserComponent extends Component {
           />
         </FormGroup>
         <FormGroup>
-          <Button block type="submit" color="success">
+          <Button block size="lg" type="submit" color="success">
             Create
           </Button>
         </FormGroup>
