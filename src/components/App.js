@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div className="the-cord">
         <div className="the-form">
-          <h2>Users</h2>
+          <h2>React Redux Saga CRUD</h2>
 
           {/* Alert Saga Component */}
           <Alert

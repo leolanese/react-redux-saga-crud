@@ -2,38 +2,31 @@ import React from "react";
 import { Button } from "reactstrap";
 
 const UserListItemComponent = ({ user, onDeleteClick }) => {
-  const stringToHslColor = (str = "") => {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      hash = str.charCodeAt(i) + ((hash << 5) - hash);
-    }
-
-    const h = hash % 360;
-    return `hsl(${h},60%,80%)`;
-  };
-
   return (
     <div style={{ display: "flex" }}>
       <div
         style={{
           margin: "auto 0",
           textAlign: "center",
-          height: "40px",
-          width: "40px",
+          height: "2.5em",
+          width: "2.5em",
           lineHeight: "40px",
           borderRadius: "50%",
-          color: "white",
+          color: "#fff",
           fontWeight: "bold",
-          background: stringToHslColor(user.firstName + user.lastName),
+          background: "darkred",
+          border: "solid 2px #555",
         }}
       >
         {!!user && !!user.firstName && !!user.lastName
           ? user.firstName[0].toUpperCase() + user.lastName[0].toUpperCase()
           : ""}
       </div>
+
       <div style={{ margin: "auto 0", flexGrow: 1, paddingLeft: "10px" }}>
         {user.firstName} {user.lastName}
       </div>
+
       <div style={{ margin: "auto 0" }}>
         <Button
           size="sm"
