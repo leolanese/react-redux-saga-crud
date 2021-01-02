@@ -10,9 +10,7 @@ import * as actions from "../actions/users";
 import * as api from "../apiRequests/users";
 
 /*
-
   get / watch = saga
-
 */
 
 function* getUsers() {
@@ -26,7 +24,7 @@ function* getUsers() {
   } catch (e) {
     yield put(
       actions.usersError({
-        error: "An error occurred when trying to get the users",
+        error: "Error when getting the users",
       })
     );
   }
@@ -43,7 +41,7 @@ function* deleteUser(userId) {
   } catch (e) {
     yield put(
       actions.usersError({
-        error: "An error occurred when trying to delete the user",
+        error: "Error when deleting a user",
       })
     );
   }
@@ -67,7 +65,7 @@ function* createUser({ payload }) {
   } catch (e) {
     yield put(
       actions.usersError({
-        error: "An error occurred when trying to create the user",
+        error: "Error when creating a user",
       })
     );
   }
