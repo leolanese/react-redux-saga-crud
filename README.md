@@ -74,7 +74,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### REM REST API
 
-* Settings:
+#### How it works
+The REM API responds as if it had a real database storing your data, but rather than doing that, it saves data in a cookie instead.
+
+This means you can create entities, update them and query them, and the data will persist between requests, just like in a real API. The difference vs a real API is that no one else can see your data, because nothing actually gets saved in the server. Any data you create is only available to you, and only until the end of the browser session.
+
+Note that cookies can only store about 4kb worth of data. If you go over the limit, the server will return an error and clear the cookie. When this happens, all the data will be erased, so you can continue using REM as a data storage mechanism without needing to mess around with the storage cookie.
+
+#### Settings:
 As of February 2020, chrome has blocked cross-site cookies by default which means the REM Rest API will no longer work. To get around this go to `chrome://flags/` in a new tab in chrome, then disable the following options:
 
 ```js
@@ -83,7 +90,9 @@ As of February 2020, chrome has blocked cross-site cookies by default which mean
 `Cookies without SameSite must be secure` = DISABLE
 ```
 
-### Let's get starting
+---
+## Let's get starting
+
 ```js
 npx create-react-app react-redux-saga-crud && cd react-redux-saga-crud
 npm i --save redux react-redux redux-saga reactstrap react react-dom axios
@@ -106,7 +115,6 @@ npm i --save bootstrap
 - node@12.4.0
 - nvm@0.34.0
 ```
-
 
 ```js
 // arquitecture to be create it after deploy
