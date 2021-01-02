@@ -11,3 +11,10 @@
   padding: 2em;
   width: 100%;
 }
+
+.the-list {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 200px;
+}

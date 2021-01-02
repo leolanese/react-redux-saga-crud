@@ -9,6 +9,12 @@ import {
 import * as actions from "../actions/users";
 import * as api from "../apiRequests/users";
 
+/*
+
+  get / watch = saga
+
+*/
+
 function* getUsers() {
   try {
     const result = yield call(api.getUsers);
@@ -33,7 +39,6 @@ function* watchGetUsersRequest() {
 function* deleteUser(userId) {
   try {
     yield call(api.deleteUser, userId);
-
     yield call(getUsers);
   } catch (e) {
     yield put(
