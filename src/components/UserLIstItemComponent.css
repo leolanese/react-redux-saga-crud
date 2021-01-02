@@ -22,3 +22,12 @@
 .column-right {
  text-align: right;
 }
+
+.list-group {
+ width: 50%;
+ margin-left: 2em;
+}
+
+.list-group-item{
+ background: aliceblue;
+}
