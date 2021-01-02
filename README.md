@@ -81,7 +81,7 @@ This means you can create entities, update them and query them, and the data wil
 
 Note that cookies can only store about 4kb worth of data. If you go over the limit, the server will return an error and clear the cookie. When this happens, all the data will be erased, so you can continue using REM as a data storage mechanism without needing to mess around with the storage cookie.
 
-* REM REST API Further information: https://rem-rest-api.herokuapp.com/
+* REM REST API Further information: https://github.com/lhorie/rem
 
 #### Settings:
 As of February 2020, chrome has blocked cross-site cookies by default which means the REM Rest API will no longer work. To get around this go to `chrome://flags/` in a new tab in chrome, then disable the following options:
@@ -125,12 +125,15 @@ README.md
 ./public
 ./src
   ./actions
+    ./
   ./components
     ./App.css
     ./App.js
-    ./App.test.js
+    ./
   ./reducers
+    ./
   ./sagas
+    ./
 ```
 
 ```js
