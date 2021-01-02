@@ -21,7 +21,7 @@ const UserListComponent = ({ users, onDeleteUserClick }) => {
         .map((user) => {
           return (
             <ListGroupItem key={user.id}>
-              <UserListItemComponent onDeleteClick={onDeleteUserClick} user={user} />
+                <UserListItemComponent onDeleteClick={onDeleteUserClick} user={user} />
             </ListGroupItem>
           );
         })}

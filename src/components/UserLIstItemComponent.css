@@ -1,0 +1,20 @@
+.item {
+ display: flex;
+}
+
+.item-names {
+ vertical-align: 5px;
+}
+
+.row {
+ display: flex;
+ flex-direction:row;
+}
+
+.column {
+ flex: 1 1 0;
+}
+
+.column-right {
+ text-align: right;
+}
