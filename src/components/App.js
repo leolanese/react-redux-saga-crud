@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import NewUserForm from "./NewUserForm";
+import NewUserComponent from "./NewUserComponent";
 import UserList from "./UserList";
 import { connect } from "react-redux";
+import "./App.css";
 import {
   getUsersRequest,
   createUserRequest,
@@ -37,22 +38,29 @@ class App extends Component {
   render() {
     const users = this.props.users;
     return (
-      <div style={{ margin: "0 auto", padding: "20px", maxWidth: "600px" }}>
-        <h2>Users</h2>
-        <Alert
-          color="danger"
-          isOpen={!!this.props.users.error}
-          toggle={this.handleCloseAlert}
-        >
-          {this.props.users.error}
-        </Alert>
-        <NewUserForm onSubmit={this.handleCreateUserSubmit} />
-        {!!users.items && !!users.items.length && (
-          <UserList
-            onDeleteUserClick={this.handleDeleteUserClick}
-            users={users.items}
-          />
-        )}
+      <div class="the-cord">
+        <div className="the-form">
+          <h2>Users</h2>
+
+          {/* Alert Saga Component */}
+          <Alert
+            color="danger"
+            isOpen={!!this.props.users.error}
+            toggle={this.handleCloseAlert}
+          >
+            {this.props.users.error}
+          </Alert>
+        </div>
+
+        <div className="the-list">
+          <NewUserComponent onSubmit={this.handleCreateUserSubmit} />
+          {!!users.items && !!users.items.length && (
+            <UserList
+              onDeleteUserClick={this.handleDeleteUserClick}
+              users={users.items}
+            />
+          )}
+        </div>
       </div>
     );
   }

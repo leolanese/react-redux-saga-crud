@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.the-cord {
+  padding: 2em;
+}
+
+.the-form {
+  width: 50%;
+}

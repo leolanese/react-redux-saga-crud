@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const sagaMiddleware = createSagaMiddleware();
 
+// API
 const protocol = "http://";
 const domain = "rem-rest-api.herokuapp.com";
 const pathApi = "/api";

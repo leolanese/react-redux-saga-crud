@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
-class NewUserForm extends Component {
+class NewUserComponent extends Component {
   state = {
     firstName: "",
     lastName: "",
@@ -36,7 +36,9 @@ class NewUserForm extends Component {
 
   render() {
     return (
+      //  extending from React Strap
       <Form onSubmit={this.handleSubmit}>
+        {/* extending from React Strap */}
         <FormGroup>
           <Label>First name</Label>
           <Input
@@ -65,4 +67,4 @@ class NewUserForm extends Component {
   }
 }
 
-export default NewUserForm;
+export default NewUserComponent;
