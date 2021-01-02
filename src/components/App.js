@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NewUserComponent from "./NewUserComponent";
-import UserList from "./UserList";
+import UserList from "./UserListComponent";
 import { connect } from "react-redux";
 import "./App.css";
 import {
@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     const users = this.props.users;
     return (
-      <div class="the-cord">
+      <div className="the-cord">
         <div className="the-form">
           <h2>Users</h2>
 

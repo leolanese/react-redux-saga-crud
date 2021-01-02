@@ -39,8 +39,13 @@
 
 .the-cord {
   padding: 2em;
+  width: 100%;
 }
 
 .the-form {
+  width: 50%;
+}
+
+.the-list {
   width: 50%;
 }
