@@ -3,14 +3,16 @@ import * as actions from "../actions/users";
 import * as api from "../apiRequests/users";
 
 /*
-  generator function* get try-catch / generator function* watch yield = saga
+  generator function* get try-catch
+  /
+  generator function* watch yield = saga
 */
 
 function* getUsers() {
   /*
     try / catch = blocking saga
   */
-  // this describe the flow of how side effects are called
+  // worker saga: this describe the flow of how side effects are called
   try {
     const result = yield call(api.getUsers);
     yield put(
@@ -30,6 +32,9 @@ function* getUsers() {
 function* watchGetUsersRequest() {
   // non-blocking saga
   // getUsers refereing to the worker saga
+  // this is the watcher saga: it watches when a particular
+  // redux action has been dispatched
+  // then acts upon the actin by calling a worker saga (getUsers)
   yield takeEvery(actions.Types.GET_USERS_REQUEST, getUsers);
 }
 
