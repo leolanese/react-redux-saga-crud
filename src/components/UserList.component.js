@@ -1,5 +1,5 @@
 import React from "react";
-import UserListItemComponent from "./UserListItemComponent";
+import UserListItemComponent from "./UserListItem.component";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 const UserListComponent = ({ users, onDeleteUserClick }) => {

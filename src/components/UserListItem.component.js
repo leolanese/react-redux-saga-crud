@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "reactstrap";
-import "./UserLIstItemComponent.css";
+import "./UserLIstItem.component.css";
 
 const UserListItemComponent = ({ user, onDeleteClick }) => {
   return (

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import NewUserComponent from "./NewUserComponent";
-import UserList from "./UserListComponent";
+import NewUserComponent from "./NewUser.component";
+import UserList from "./UserList.component";
 import { connect } from "react-redux";
 import "./App.css";
 import {

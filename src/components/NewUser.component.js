@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import "./NewUserComponent.css"
+import "./NewUser.component.css"
 
 class NewUserComponent extends Component {
   state = {
