@@ -14,7 +14,9 @@ function* getUsers() {
   */
   // worker saga: this describe the flow of how side effects are called
   try {
+    // put will make the API call, code after this line will execute after the call returns
     const result = yield call(api.getUsers);
+
     yield put(
       actions.getUsersSuccess({
         items: result.data.data,
