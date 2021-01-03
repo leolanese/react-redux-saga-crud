@@ -1,5 +1,5 @@
 import { takeEvery, takeLatest, take, call, put, fork } from "redux-saga/effects";
-import * as actions from "../actions/users";
+import * as actions from "../actions/users.action";
 import * as api from "../apiRequests/users";
 
 /*

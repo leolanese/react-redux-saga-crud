@@ -8,7 +8,7 @@ import {
   createUserRequest,
   deleteUserRequest,
   usersError,
-} from "../actions/users";
+} from "../actions/users.action";
 import { Alert } from "reactstrap";
 
 class App extends Component {
