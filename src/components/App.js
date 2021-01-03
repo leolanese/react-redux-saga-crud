@@ -45,7 +45,7 @@ class App extends Component {
           <Jumbotron fluid>
             <Container fluid>
               <h2 className="display-3">React Redux Saga CRUD</h2>
-              <p className="lead">Create, Read, Update and Delete using ReactJS, REM API, AXIOS, BS and React-Strap</p>
+              <p className="lead">Create, Read, Update and Delete using Redux-Saga, ReactJS, REM API, AXIOS, BS and React-Strap</p>
             </Container>
           </Jumbotron>
 
