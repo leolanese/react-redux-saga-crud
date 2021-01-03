@@ -10,6 +10,7 @@ import {
   usersError,
 } from "../actions/users.action";
 import { Alert } from "reactstrap";
+import { Jumbotron, Container } from "reactstrap";
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +41,13 @@ class App extends Component {
     return (
       <div className="the-cord">
         <div className="the-form">
-          <h2>React Redux Saga CRUD</h2>
+
+          <Jumbotron fluid>
+            <Container fluid>
+              <h2 className="display-3">React Redux Saga CRUD</h2>
+              <p className="lead">Create, Read, Update and Delete using ReactJS, REM API, AXIOS, BS and React-Strap</p>
+            </Container>
+          </Jumbotron>
 
           {/* Alert Saga Component */}
           <Alert
