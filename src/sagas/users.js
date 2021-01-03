@@ -1,19 +1,16 @@
-import {
-  takeEvery,
-  takeLatest,
-  take,
-  call,
-  put,
-  fork,
-} from "redux-saga/effects";
+import {  takeEvery,takeLatest,take,call,put,fork } from "redux-saga/effects";
 import * as actions from "../actions/users";
 import * as api from "../apiRequests/users";
 
 /*
-  get / watch = saga
+  generator function* get try-catch / generator function* watch yield = saga
 */
 
 function* getUsers() {
+  /*
+    try / catch = blocking saga
+  */
+  // this describe the flow of how side effects are called
   try {
     const result = yield call(api.getUsers);
     yield put(
@@ -31,6 +28,8 @@ function* getUsers() {
 }
 
 function* watchGetUsersRequest() {
+  // non-blocking saga
+  // getUsers refereing to the worker saga
   yield takeEvery(actions.Types.GET_USERS_REQUEST, getUsers);
 }
 
