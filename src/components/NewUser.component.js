@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import "./NewUser.component.css"
+import "./NewUser.component.css";
+import { InputGroup, InputGroupAddon, InputGroupText } from "reactstrap";
 
 class NewUserComponent extends Component {
   state = {
@@ -41,24 +42,32 @@ class NewUserComponent extends Component {
       <Form onSubmit={this.handleSubmit} className="the-list-form">
         {/* extending from React Strap */}
         <FormGroup>
-          <Label>First name</Label>
-          <Input
-            required
-            type="text"
-            value={this.state.firstName}
-            onChange={this.handleFirstNameChange}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label>Last name</Label>
-          <Input
-            required
-            type="text"
-            value={this.state.lastName}
-            onChange={this.handleLastNameChange}
-          />
-        </FormGroup>
-        <FormGroup>
+          <InputGroup>
+          <InputGroupAddon addonType="prepend">
+              <InputGroupText>First Name</InputGroupText>
+            </InputGroupAddon>
+            <Input
+              placeholder="username"
+              addon
+              required
+              type="text"
+              value={this.state.firstName}
+              onChange={this.handleFirstNameChange}
+            />
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>Last Name</InputGroupText>
+            </InputGroupAddon>
+            <Input
+              placeholder="username"
+              addon
+              required
+              type="text"
+              value={this.state.lastName}
+              onChange={this.handleLastNameChange}
+            />
+          </InputGroup>
+          <br />
+
           <Button block size="lg" type="submit" color="success">
             Create
           </Button>
