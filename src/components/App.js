@@ -41,17 +41,20 @@ class App extends Component {
     return (
       <div className="the-cord">
         <div className="the-form">
-
           <Jumbotron fluid>
             <Container fluid>
               <h2 className="display-3">React Redux Saga CRUD</h2>
-              <p className="lead">Create, Read, Update and Delete using Redux-Saga, ReactJS, REM API, AXIOS, BS and React-Strap</p>
+              <p className="lead">
+                Create, Read, Update and Delete using Redux-Saga, ReactJS, REM
+                API, AXIOS, BS and React-Strap
+              </p>
             </Container>
           </Jumbotron>
 
           {/* Alert Saga Component */}
           <Alert
             color="danger"
+            size="sm"
             isOpen={!!this.props.users.error}
             toggle={this.handleCloseAlert}
           >

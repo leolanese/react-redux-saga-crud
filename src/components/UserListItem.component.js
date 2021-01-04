@@ -10,7 +10,7 @@ const UserListItemComponent = ({ user, onDeleteClick }) => {
       <div className="column column-right">
       <Button
           size="lg"
-          color="danger"
+          color="warning"
           block
           onClick={() => onDeleteClick(user.id)}
         >
